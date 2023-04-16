@@ -10,17 +10,17 @@ fun invalidValue(string: String) : Boolean {
     for (i in valueList){
         if (i >1){
             clearScreen()
-            println("Invalid Binary values.")
+            println("Invalid Binary values (contains numbers larger than 1s or 0s).")
             return true
         }
     }
     return false
 }
 
-fun powerOf(num1: Int, num2: Int) : Int {
+fun powerOf(num1: Long, num2: Long) : Long {
     var counter = 1
     var result = num1
-    if (num2 == 0){
+    if (num2 == 0L){
         return 1
     }
     while (counter < num2){
@@ -30,27 +30,28 @@ fun powerOf(num1: Int, num2: Int) : Int {
     return result
 }
 fun main(){
-
+	clearScreen()
     var errorFlag = true
     var num = ""
 
     while (errorFlag) {
-        println("Enter Binary Number: ")
+        println("Enter a Binary Number (1s - 0s): ")
         num = readln()
         if (num.all { it.isLetter()}){
             clearScreen()
-            println("Invalid Binary values.")
+            println("Invalid Binary values (letters).")
         } else if (!invalidValue(num)){
             errorFlag = false
         }
     }
 
     var counter = 0
-    val newNum = mutableListOf<Int>()
-    val index = num.length-1
+    val newNum = mutableListOf<Long>()
+    val index : Long  = num.length-1.toLong()
     for (i in index downTo 0){
         newNum.add( (num[counter].code - '0'.code) * powerOf(2, i))
         counter += 1
     }
-    println(newNum.sum())
+    println("\nThe Binary Number Entered: $num")
+    println("Converts Into the Decimal Number: ${newNum.sum()}\n")
 }
