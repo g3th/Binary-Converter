@@ -47,7 +47,7 @@ fun main(){
 
     var counter = 0
     val newNum = mutableListOf<Long>()
-    val index : Long  = num.length-1.toLong()
+    val index = num.length-1.toLong()
     for (i in index downTo 0){
         newNum.add( (num[counter].code - '0'.code) * powerOf(2, i))
         counter += 1
