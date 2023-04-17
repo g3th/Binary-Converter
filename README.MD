@@ -1,6 +1,6 @@
-# Kotlin Binary to Decimal Converter
-## Converts a binary number into a decimal number
+# Kotlin Binary to Decimal/Decimal to Binary Converter
+## Converts any digit entered
 
-Enter any binary number, which will be converted into decimal via the appropriate equation. 
+Enter any binary or decimal number, and it will be converted via the appropriate equation. 
 
-Includes some basic error checking to stop the user entering wrong values.
+Includes basic error checking to stop the user entering wrong values such as letters or symbols.

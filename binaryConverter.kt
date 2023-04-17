@@ -79,7 +79,7 @@ fun main(){
 
     while (errorFlag) {
         
-        println("Enter a Binary Number (1s - 0s): ")
+        println("Enter a Binary/Decimal Number: ")
 
         val num = readln()
         val requiredConversion = checkValue(num)
