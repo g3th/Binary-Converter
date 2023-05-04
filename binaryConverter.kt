@@ -92,10 +92,10 @@ fun main(){
             println("Invalid Binary values (symbols).")
         } else {
             if (requiredConversion == "fromDecimalToBinary") {
-                println("\nThe Decimal Number Entered: $num")
+                println("\nThe Decimal Number Entered: $num\n")
                 println("Converts Into the Binary Number: ${decToBinaryConverter(num.toInt())}\n")
             } else {
-                println("\nThe Binary Number Entered: $num")
+                println("\nThe Binary Number Entered: $num\n")
                 println("Converts Into the Decimal Number: ${binaryToDecConverter(num)}\n")
             }
             errorFlag = false
